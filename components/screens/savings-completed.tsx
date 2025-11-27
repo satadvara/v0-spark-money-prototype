@@ -11,10 +11,10 @@ export default function SavingsCompleted({ onNavigate }: SavingsCompletedProps) 
   return (
     <div className="flex flex-col min-h-screen bg-white max-w-md mx-auto">
       {/* Header */}
-      <div className="bg-[#0B4DA1] px-4 py-4">
-        <div className="flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-white" />
-          <span className="text-white font-medium text-lg">Day 30</span>
+      <div className="bg-[#0B4DA1] px-4 py-5">
+        <div className="flex items-center gap-3">
+          <Calendar className="w-6 h-6 text-white" />
+          <span className="text-white font-bold text-xl">Day 30</span>
         </div>
       </div>
 
@@ -37,25 +37,6 @@ export default function SavingsCompleted({ onNavigate }: SavingsCompletedProps) 
         </div>
 
         {/* Savings Journey Card */}
-        <div className="w-full bg-gray-50 rounded-xl p-4">
-          <p className="text-xs text-gray-500 mb-3">Your Savings Journey</p>
-          <div className="flex justify-between items-center">
-            <div className="text-center">
-              <p className="text-xl font-bold text-[#0B4DA1]">30</p>
-              <p className="text-[10px] text-gray-500">Days</p>
-            </div>
-            <div className="h-6 w-px bg-gray-300" />
-            <div className="text-center">
-              <p className="text-xl font-bold text-[#0B4DA1]">₹500</p>
-              <p className="text-[10px] text-gray-500">Per Day</p>
-            </div>
-            <div className="h-6 w-px bg-gray-300" />
-            <div className="text-center">
-              <p className="text-xl font-bold text-green-500">100%</p>
-              <p className="text-[10px] text-gray-500">Complete</p>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Bottom Button */}
