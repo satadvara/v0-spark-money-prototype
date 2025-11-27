@@ -11,6 +11,10 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#D4A017]/10 to-white max-w-md mx-auto">
       <div className="flex-1 flex flex-col items-center justify-center px-6">
+        <h2 className="text-base font-medium text-gray-700 text-center mb-4">
+          Congratulations! You have paid for your loan!
+        </h2>
+
         {/* Success Icon */}
         <div className="relative mb-5">
           <div className="w-28 h-28 relative">
@@ -25,9 +29,9 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
           </div>
         </div>
 
-        {/* Success Message */}
-        <h1 className="text-2xl font-bold text-gray-900 text-center mb-1">
-          <span className="text-[#D4A017]">₹150</span> added
+        <h1 className="text-2xl font-bold text-center mb-1">
+          <span className="text-[#D4A017]">₹150</span> <span className="text-gray-700 font-normal">Free Gold</span>{" "}
+          <span className="text-green-600">added</span>
         </h1>
         <p className="text-base text-gray-600 text-center mb-6">to your digital gold balance</p>
 
