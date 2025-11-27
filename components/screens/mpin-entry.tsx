@@ -9,7 +9,7 @@ interface MpinEntryProps {
 
 export default function MpinEntry({ onNavigate }: MpinEntryProps) {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white max-w-md mx-auto">
       {/* Header */}
       <div className="bg-[#0B4DA1] px-4 py-4 flex items-center gap-3">
         <button onClick={() => onNavigate(2)}>
@@ -19,8 +19,8 @@ export default function MpinEntry({ onNavigate }: MpinEntryProps) {
       </div>
 
       <div className="flex-1 flex flex-col items-center justify-center px-6">
-        <div className="w-20 h-20 rounded-full bg-[#0B4DA1]/10 flex items-center justify-center mb-8">
-          <svg className="w-10 h-10 text-[#0B4DA1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-16 h-16 rounded-full bg-[#0B4DA1]/10 flex items-center justify-center mb-6">
+          <svg className="w-8 h-8 text-[#0B4DA1]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -30,14 +30,14 @@ export default function MpinEntry({ onNavigate }: MpinEntryProps) {
           </svg>
         </div>
 
-        <h2 className="text-xl font-semibold text-gray-900 mb-2">Enter your MPIN</h2>
-        <p className="text-gray-500 mb-8">Enter your 4-digit MPIN to confirm payment</p>
+        <h2 className="text-lg font-semibold text-gray-900 mb-1">Enter your MPIN</h2>
+        <p className="text-sm text-gray-500 mb-6 text-center">Enter your 4-digit MPIN to confirm payment</p>
 
         {/* MPIN Boxes */}
-        <div className="flex gap-4 mb-8">
+        <div className="flex gap-3 mb-6">
           {[1, 2, 3, 4].map((i) => (
-            <div key={i} className="w-14 h-14 rounded-xl border-2 border-[#0B4DA1] flex items-center justify-center">
-              <div className="w-3 h-3 rounded-full bg-[#0B4DA1]" />
+            <div key={i} className="w-12 h-12 rounded-xl border-2 border-[#0B4DA1] flex items-center justify-center">
+              <div className="w-2.5 h-2.5 rounded-full bg-[#0B4DA1]" />
             </div>
           ))}
         </div>
@@ -49,7 +49,7 @@ export default function MpinEntry({ onNavigate }: MpinEntryProps) {
       <div className="p-4">
         <Button
           onClick={() => onNavigate(4)}
-          className="w-full bg-[#0B4DA1] hover:bg-[#093d81] text-white py-6 text-lg font-medium rounded-xl"
+          className="w-full bg-[#0B4DA1] hover:bg-[#093d81] text-white py-5 text-base font-medium rounded-xl"
         >
           Pay ₹15,000
         </Button>
