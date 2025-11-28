@@ -25,7 +25,7 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
         <span className="text-white font-medium text-lg">Suresh Kumar</span>
       </div>
 
-      {/* Main Content - Split into thirds with gap */}
+      {/* Main Content */}
       <div className="flex-1 flex flex-col px-6 py-6">
         {/* Top 1/3: Quick Actions */}
         <div className="flex-1 flex items-center justify-center">
@@ -63,6 +63,11 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                 Loan
                 <br />
                 Repayment
+              </span>
+
+              {/* ⭐ NEW LINE ADDED HERE */}
+              <span className="text-[10px] text-[#0B4DA1] font-semibold mt-1 text-center">
+                Pay Loan & Earn Free Gold
               </span>
             </button>
           </div>
