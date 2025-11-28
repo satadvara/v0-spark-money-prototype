@@ -61,7 +61,7 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
         </div>
 
         {/* New line about saving for next EMI */}
-        <p className="text-sm text-gray-600 text-center mb-6">₹150 gold will help you save for your next EMI</p>
+        <p className="text-gray-600 text-center mb-6 font-bold text-xl">₹150 gold will help you save for your next EMI</p>
       </div>
 
       {/* Bottom Button */}
