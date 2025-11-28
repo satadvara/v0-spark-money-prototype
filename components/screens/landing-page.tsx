@@ -65,9 +65,9 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                 Repayment
               </span>
 
-              {/* ⭐ NEW LINE ADDED HERE */}
-              <span className="text-[10px] text-[#0B4DA1] font-semibold mt-1 text-center">
-                Pay Loan & Earn Free Gold
+              {/* ⭐ UPDATED CTA LINE */}
+              <span className="text-[10px] text-black font-semibold mt-1 text-center">
+                 Pay Loan & Earn Free Gold 🪙
               </span>
             </button>
           </div>
