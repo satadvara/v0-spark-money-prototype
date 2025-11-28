@@ -12,7 +12,7 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
   const goalAmount = 15000
   const progressPercent = (currentBalance / goalAmount) * 100
   const remaining = goalAmount - currentBalance
-  const progressPercent =30
+ 
 
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#D4A017]/10 to-white max-w-md mx-auto">
@@ -76,7 +76,7 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
             <div
               className="h-full rounded-full relative"
               style={{
-                width: `${progressPercent}%`,
+                width: `${30}%`,
                 background: "linear-gradient(90deg, #D4A017, #F5C842)",
               }}
             >
