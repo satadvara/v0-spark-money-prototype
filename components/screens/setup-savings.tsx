@@ -29,8 +29,8 @@ export default function SetupSavings({ onNavigate }: SetupSavingsProps) {
       <div className="flex-1 px-5 py-6">
         {/* Goal */}
         <div className="text-center mb-6">
-          <p className="text-sm text-gray-500 mb-1">Your EMI Goal</p>
-          <h1 className="text-3xl font-bold text-[#0B4DA1]">₹15,000</h1>
+          <p className="text-sm text-gray-500 mb-1">Your EMI Goal : Rs. 15,000- Rs. 150 = Rs. 14,850     </p>
+          <h1 className="text-3xl font-bold text-[#0B4DA1]">₹14,850</h1>
         </div>
 
         {/* Tabs */}

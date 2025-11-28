@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
+import { CheckCircle, Home } from "lucide-react"
 
 interface GoldRewardSuccessProps {
   onNavigate: (screen: number) => void
@@ -10,6 +10,16 @@ interface GoldRewardSuccessProps {
 export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps) {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#D4A017]/10 to-white max-w-md mx-auto">
+      <div className="p-4">
+        <button
+          onClick={() => onNavigate(1)}
+          className="flex items-center gap-2 text-[#0B4DA1] hover:text-[#093d81] transition-colors"
+        >
+          <Home className="w-5 h-5" />
+          <span className="text-sm font-medium">Home</span>
+        </button>
+      </div>
+
       <div className="flex-1 flex flex-col items-center justify-center px-6">
         <h2 className="text-base font-medium text-gray-700 text-center mb-4">
           Congratulations! You have paid for your loan!
@@ -33,14 +43,14 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
           <span className="text-[#D4A017]">₹150</span> <span className="text-gray-700 font-normal">Free Gold</span>{" "}
           <span className="text-green-600">added</span>
         </h1>
-        <p className="text-base text-gray-600 text-center mb-6">to your digital gold balance</p>
+        <p className="text-base text-gray-600 text-center mb-6">to your gold balance</p>
 
         {/* Gold Balance Card */}
-        <div className="w-full bg-white rounded-xl shadow-md p-5 mb-6">
+        <div className="w-full bg-white rounded-xl shadow-md p-5 mb-4">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs text-gray-500">Total Gold Balance</p>
-              <p className="text-xl font-bold text-[#D4A017]">₹1,150</p>
+              <p className="text-xl font-bold text-[#D4A017]">₹150</p>
             </div>
             <div className="w-10 h-10 rounded-full bg-[#D4A017]/10 flex items-center justify-center">
               <svg className="w-5 h-5 text-[#D4A017]" viewBox="0 0 24 24" fill="currentColor">
@@ -49,6 +59,9 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
             </div>
           </div>
         </div>
+
+        {/* New line about saving for next EMI */}
+        <p className="text-sm text-gray-600 text-center mb-6">₹150 gold will help you save for your next EMI</p>
       </div>
 
       {/* Bottom Button */}

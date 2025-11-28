@@ -1,6 +1,6 @@
 "use client"
 
-import { Smartphone, Car, Banknote } from "lucide-react"
+import { Smartphone, Car, Banknote, Coins } from "lucide-react"
 import BottomNav from "@/components/ui/bottom-nav"
 
 interface LandingPageProps {
@@ -25,36 +25,48 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
         <span className="text-white font-medium text-lg">Suresh Kumar</span>
       </div>
 
+      <div className="bg-[#0B4DA1] px-4 pb-6 text-background bg-card">
+        <div className="bg-gradient-to-r from-[#D4A017] to-[#F5C842] rounded-2xl p-4 flex items-center gap-4 leading-[1.88rem]">
+          <div className="w-12 h-12 rounded-full bg-[#C49516] flex items-center justify-center">
+            <Coins className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <p className="text-white/90 text-sm font-medium">Your Gold Balance</p>
+            <p className="text-white text-2xl font-bold">₹1,150</p>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content */}
-      <div className="flex-1 flex flex-col px-6 py-6">
-        {/* Top 1/3: Quick Actions */}
-        <div className="flex-1 flex items-center justify-center">
-          <div className="flex justify-center gap-6">
-            {/* Mobile Recharge */}
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mb-2">
-                <Smartphone className="w-7 h-7 text-gray-600" />
-              </div>
-              <span className="text-xs text-gray-600 text-center leading-tight">
-                Mobile
-                <br />
-                Recharge
-              </span>
+      <div className="flex-1 flex flex-col px-6 py-8">
+        {/* Quick Actions */}
+        <div className="flex justify-center gap-8">
+          {/* Mobile Recharge */}
+          <div className="flex flex-col items-center">
+            <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mb-2">
+              <Smartphone className="w-7 h-7 text-gray-600" />
             </div>
+            <span className="text-xs text-gray-600 text-center leading-tight">
+              Mobile
+              <br />
+              Recharge
+            </span>
+          </div>
 
-            {/* FASTag Recharge */}
-            <div className="flex flex-col items-center">
-              <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mb-2">
-                <Car className="w-7 h-7 text-gray-600" />
-              </div>
-              <span className="text-xs text-gray-600 text-center leading-tight">
-                FASTag
-                <br />
-                Recharge
-              </span>
+          {/* FASTag Recharge */}
+          <div className="flex flex-col items-center">
+            <div className="w-14 h-14 rounded-2xl bg-gray-100 flex items-center justify-center mb-2">
+              <Car className="w-7 h-7 text-gray-600" />
             </div>
+            <span className="text-xs text-gray-600 text-center leading-tight">
+              FASTag
+              <br />
+              Recharge
+            </span>
+          </div>
 
-            {/* Loan Repayment - Highlighted */}
+          {/* Loan Repayment - Highlighted */}
+          <div className="flex flex-col items-center relative">
             <button onClick={() => onNavigate(2)} className="flex flex-col items-center">
               <div className="w-14 h-14 rounded-2xl bg-[#0B4DA1] flex items-center justify-center mb-2 shadow-lg">
                 <Banknote className="w-7 h-7 text-white" />
@@ -64,44 +76,10 @@ export default function LandingPage({ onNavigate }: LandingPageProps) {
                 <br />
                 Repayment
               </span>
-
-              {/* ⭐ UPDATED CTA LINE */}
-              <span className="text-[10px] text-black font-semibold mt-1 text-center">
-                 Pay Loan & Earn Free Gold 🪙
-              </span>
             </button>
-          </div>
-        </div>
-
-        {/* Middle 1/3: Gold Pot Section */}
-        <div className="flex-1 flex flex-col items-center justify-center mt-8">
-          <div className="relative w-32 h-32 mx-auto mb-4">
-            <img
-              src="/golden-pot-overflowing-with-gold-coins-traditional.jpg"
-              alt="Gold pot with coins"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <h1 className="text-lg font-bold text-gray-900 leading-tight text-center">
-            You have <span className="text-[#D4A017]">₹1,000</span> worth of gold with you
-          </h1>
-        </div>
-
-        {/* Bottom 1/3: Third Party Logos */}
-        <div className="flex-1 flex flex-col items-center justify-center mt-8">
-          <p className="text-xs text-gray-400 text-center mb-3">Third-Party Partners</p>
-          <div className="flex justify-center gap-4 opacity-50">
-            <div className="w-10 h-6 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-[7px] text-gray-500">HDFC</span>
-            </div>
-            <div className="w-10 h-6 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-[7px] text-gray-500">ICICI</span>
-            </div>
-            <div className="w-10 h-6 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-[7px] text-gray-500">SBI</span>
-            </div>
-            <div className="w-10 h-6 bg-gray-200 rounded flex items-center justify-center">
-              <span className="text-[7px] text-gray-500">Axis</span>
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-[#FFF9E6] border border-[#D4A017] rounded-lg px-3 py-1.5 whitespace-nowrap shadow-sm">
+              <span className="text-xs text-gray-800 font-medium">Pay Loan & Earn Free Gold</span>
+              <span className="ml-1">🪙</span>
             </div>
           </div>
         </div>
