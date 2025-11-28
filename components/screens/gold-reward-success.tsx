@@ -76,7 +76,7 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
             <div
               className="h-full rounded-full relative"
               style={{
-                width: `${30}%`,
+                width: `30%`,
                 background: "linear-gradient(90deg, #D4A017, #F5C842)",
               }}
             >
