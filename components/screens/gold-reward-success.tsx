@@ -8,6 +8,11 @@ interface GoldRewardSuccessProps {
 }
 
 export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps) {
+  const currentBalance = 150
+  const goalAmount = 15000
+  const progressPercent = (currentBalance / goalAmount) * 100
+  const remaining = goalAmount - currentBalance
+
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-b from-[#D4A017]/10 to-white max-w-md mx-auto">
       <div className="p-4">
@@ -60,8 +65,38 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
           </div>
         </div>
 
-        {/* New line about saving for next EMI */}
-        <p className="text-gray-600 text-center mb-6 font-bold text-xl">₹150 gold will help you save for your next EMI</p>
+        {/* Progress Bar with Golden Animation */}
+        <div className="w-full bg-white rounded-xl shadow-md p-5 mb-4">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-xs text-gray-500">EMI Goal</span>
+            <span className="text-xs text-gray-500">₹{goalAmount.toLocaleString()}</span>
+          </div>
+          <div className="w-full h-3 bg-gray-200 rounded-full overflow-hidden">
+            <div
+              className="h-full rounded-full relative"
+              style={{
+                width: `${progressPercent}%`,
+                background: "linear-gradient(90deg, #D4A017, #F5C842)",
+              }}
+            >
+              {/* Shimmer Animation */}
+              <div
+                className="absolute inset-0 animate-pulse"
+                style={{
+                  background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+                  animation: "shimmer 2s infinite",
+                }}
+              />
+            </div>
+          </div>
+          <p className="text-center text-sm text-gray-600 mt-3">
+            <span className="font-semibold text-[#D4A017]">₹{remaining.toLocaleString()}</span> to go
+          </p>
+        </div>
+
+        <p className="text-gray-600 text-center mb-6 font-bold text-lg">
+          ₹150 gold will help you save for your next EMI
+        </p>
       </div>
 
       {/* Bottom Button */}
@@ -73,6 +108,14 @@ export default function GoldRewardSuccess({ onNavigate }: GoldRewardSuccessProps
           Save for the next EMI
         </Button>
       </div>
+
+      {/* Shimmer Keyframe Animation */}
+      <style jsx>{`
+        @keyframes shimmer {
+          0% { transform: translateX(-100%); }
+          100% { transform: translateX(100%); }
+        }
+      `}</style>
     </div>
   )
 }
